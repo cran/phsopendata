@@ -1,7 +1,7 @@
 Package: phsopendata
 Title: Extract from the Scottish Health and Social Care Open Data
         Platform
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: c(
     person("Public Health Scotland", , , "phs.datascience@phs.scot", role = "cph"),
     person("Csilla", "Scharle", , "csilla.scharle2@phs.scot", role = "aut"),
@@ -19,13 +19,14 @@ BugReports: https://github.com/Public-Health-Scotland/phsopendata/issues
 Imports: cli (>= 3.2.0), dplyr (>= 1.0.0), httr (>= 1.0.0), magrittr
         (>= 1.0.0), purrr (>= 1.0.0), readr (>= 1.0.0), rlang (>=
         1.0.0), stringdist, tibble (>= 3.0.0)
-Suggests: covr, jsonlite (>= 1.1), spelling, testthat (>= 3.0.0), xml2
+Suggests: covr, curl, jsonlite (>= 1.1), spelling, testthat (>= 3.0.0),
+        xml2
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-GB
 RoxygenNote: 7.3.3
 NeedsCompilation: no
-Packaged: 2026-01-29 16:47:25 UTC; jamesm32
+Packaged: 2026-02-05 19:20:26 UTC; jamesm32
 Author: Public Health Scotland [cph],
   Csilla Scharle [aut],
   James Hayes [cre, aut] (ORCID: <https://orcid.org/0000-0002-5380-2029>),
@@ -33,4 +34,4 @@ Author: Public Health Scotland [cph],
   Ross Hull [aut]
 Maintainer: James Hayes <James.Hayes2@phs.scot>
 Repository: CRAN
-Date/Publication: 2026-01-29 22:30:02 UTC
+Date/Publication: 2026-02-05 20:00:02 UTC
