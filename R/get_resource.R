@@ -13,7 +13,8 @@
 #' @return A [tibble][tibble::tibble-package] with the data.
 #' @export
 #'
-#' @examplesIf isTRUE(length(curl::nslookup("www.opendata.nhs.scot", error = FALSE)) > 0L)
+#' @examples
+#' \dontrun{
 #' res_id <- "ca3f8e44-9a84-43d6-819c-a880b23bd278"
 #'
 #' data <- get_resource(res_id)
@@ -26,6 +27,7 @@
 #'   row_filters = filters,
 #'   col_select = wanted_cols
 #' )
+#' }
 get_resource <- function(
   res_id,
   rows = NULL,
@@ -120,8 +122,8 @@ get_resource <- function(
     data <- purrr::map(
       res_content$result$records,
       ~.x
-    ) %>%
-      dplyr::bind_rows() %>%
+    ) |>
+      dplyr::bind_rows() |>
       dplyr::select(
         -dplyr::starts_with("rank "),
         -dplyr::matches("_id")
